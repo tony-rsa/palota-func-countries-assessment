@@ -19,7 +19,7 @@ namespace FunctionApp1.Functions
 
         [FunctionName("IsoCode")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "countries/{iso3Code}")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, nameof(HttpMethods.Get), Route = "countries/{iso3Code}")] HttpRequest req,
             ILogger log, string iso3code)
         {
             List<object> lstCountries = new List<object>();

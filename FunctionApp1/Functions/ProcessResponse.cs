@@ -16,8 +16,8 @@ namespace FunctionApp1.Functions
             {
                 var location = new object();
                 try { location = new Location {
-                        Lattitude = country["latlng"][0],
-                        Longitude = country["latlng"][1] };
+                        Lattitude = country.latlng[0],
+                        Longitude = country.latlng[1] };
                 } catch (Exception ex) { }
                 
                 lstCountries.Add((object)new Country

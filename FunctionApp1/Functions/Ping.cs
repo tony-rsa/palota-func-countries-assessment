@@ -13,7 +13,7 @@ namespace Palota.Assessment.Countries.Functions
     {
         [FunctionName("Ping")]
         public static IActionResult Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, nameof(HttpMethods.Get), Route = null)] HttpRequest req,
             ILogger log)
         {
             log.LogInformation("C# Palota HTTP trigger function processed a request.");
